@@ -12,9 +12,12 @@ function longestConsecutive(nums: number[]): number {
     maps[n] = 1;
   }
   for (let n of nums) {
-    let count = 0;
-    while (maps[n++]) {
-      count += 1;
+    let count = 1;
+    if (maps[n - 1]) {
+      continue;
+    }
+    while (maps[++n]) {
+      count++;
     }
     max = max > count ? max : count;
   }
