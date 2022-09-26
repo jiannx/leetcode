@@ -6,24 +6,7 @@
 
 // @lc code=start
 
-function getReverseStr(s) {
-  return s.split('').reverse().join('');
-}
 function longestPalindrome(s) {
-  
-  //dp[i]=字符串0到i的最长回文字符串长度
-  let dp = new Array(s.length).fill(0);
-  let max = s[0];
-  dp[0] = 1;
-  let str = s[0];
-  for (let i = 1; i < s.length; i++) {
-    dp[i] = 
-  }
-
-  return max;
-};
-
-function longestPalindrome2(s) {
   let max = '';
   for (let i = 0; i < s.length; i++) {
     helper(i, i);
