@@ -20,6 +20,9 @@
 function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
   let startNode = new ListNode();
   startNode.next = head;
+  /**
+   * 双指针
+   */
   let node = startNode;
   let pre = startNode;
   while (n > 0) {
