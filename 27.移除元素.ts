@@ -8,18 +8,13 @@
 function removeElement(nums: number[], val: number): number {
   /**
    * 双指针 
-   * oldIndex始终向前获取数据进行比对
    * newIndex 始终为已经比对的数据中不相等的个数
    * 每次比对，将比对位置的数据移到新位置
    */
-  let oldIndex = 0;
   let newIndex = 0;
   for (let i = 0; i < nums.length; i++) {
-    if (nums[oldIndex] === val) {
-      oldIndex += 1;
-    } else {
-      nums[newIndex] = nums[oldIndex];
-      oldIndex += 1;
+    if (nums[i] !== val) {
+      nums[newIndex] = nums[i];
       newIndex += 1;
     }
   }
