@@ -14,8 +14,10 @@ function permute(numbers: number[]): number[][] {
     }
     for (let i = 0; i < nums.length; i++) {
       let other = [...nums];
-      other.splice(i, 1);
-      dfs([...arr, nums[i]], other);
+      dfs([
+        ...arr,
+        other.splice(i, 1)[0]
+      ], other);
     }
   }
   dfs([], numbers);
